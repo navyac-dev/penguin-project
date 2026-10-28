@@ -20,6 +20,19 @@ bill_summary <- penguins |>
 
 knitr::kable(bill_summary)
 ```
+
+## Bill Length vs Bill Depth
+
+```{r}
+#| warning: false
+ggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm, color = species)) +
+  geom_point() +
+  labs(
+    title = "Bill Length vs Bill Depth",
+    x = "Bill Length (mm)",
+    y = "Bill Depth (mm)"
+  )
+```
 ---
 
 ## Quarto
